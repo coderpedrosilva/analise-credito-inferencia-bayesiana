@@ -127,6 +127,9 @@ No eixo horizontal, a variável inadimplente indica:
 
 Clientes inadimplentes tendem a apresentar scores mais baixos, porém há sobreposição entre os grupos, indicando que o score sozinho não é suficiente para determinar o risco.
 
+As bolinhas fora da caixa azul representam outliers, indicando clientes com scores muito acima ou muito abaixo do padrão do grupo.
+Esses casos mostram que existem exceções ao comportamento esperado, reforçando que o score de crédito, isoladamente, não determina a inadimplência.
+
 ---
 
 ### 📌 Renda Mensal vs Inadimplência
@@ -142,7 +145,7 @@ No eixo horizontal, a variável inadimplente representa:
 
 Clientes inadimplentes tendem a ter renda um pouco menor, mas também existem clientes com renda mais alta que se tornam inadimplentes.
 
-As bolinhas fora da caixa representam outliers, ou seja, clientes com renda muito acima ou abaixo do padrão do grupo.
+As bolinhas fora da caixa azul representam outliers, ou seja, clientes com renda muito acima ou abaixo do padrão do grupo.
 Esses casos indicam comportamentos atípicos e reforçam que a inadimplência não depende apenas da renda, mas da combinação de múltiplos fatores.
 
 Isso reforça a necessidade de uma análise baseada em probabilidade, e não em regras fixas.
