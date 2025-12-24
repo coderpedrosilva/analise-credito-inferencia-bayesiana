@@ -1,25 +1,46 @@
 # 📊 Análise de Crédito com Aprendizagem Bayesiana
 
 ## 📌 Visão Geral
-Este projeto tem como objetivo aplicar conceitos de Aprendizagem Bayesiana para análise de risco de crédito, utilizando dados sintéticos e estatística probabilística em Python.
+Este projeto tem como objetivo aplicar conceitos de **Aprendizagem Bayesiana** para análise de risco de crédito, utilizando dados sintéticos e estatística probabilística em Python.
 
-O foco do projeto é demonstrar, de forma prática e didática, como a probabilidade condicional pode auxiliar na tomada de decisão em cenários reais, como a identificação de clientes com maior risco de inadimplência.
+O foco é demonstrar, de forma prática e didática, como a **probabilidade condicional** pode auxiliar na tomada de decisão em cenários reais, como a identificação de clientes com maior risco de inadimplência.
 
-Este é um projeto de nível júnior, voltado para estudos iniciais em Ciência de Dados, Estatística e Machine Learning.
+Projeto de nível **júnior**, voltado para estudos iniciais em Ciência de Dados, Estatística e Machine Learning.
 
 ---
 
 ## 🧠 Conceito: Aprendizagem Bayesiana
-A Aprendizagem Bayesiana é baseada no Teorema de Bayes, que permite atualizar probabilidades à medida que novas evidências são observadas.
+A Aprendizagem Bayesiana é baseada no **Teorema de Bayes**, que permite atualizar uma probabilidade inicial à medida que novas evidências são observadas.
 
-De forma simplificada, o projeto responde à seguinte pergunta:
+De forma simplificada, o projeto responde à pergunta:
 
 > Qual é a probabilidade de um cliente ser inadimplente dado que ele já atrasou um pagamento?
 
 Essa abordagem é amplamente utilizada em:
-- Análise de risco de crédito
-- Sistemas de apoio à decisão
-- Modelos probabilísticos
+- Análise de risco de crédito  
+- Sistemas de apoio à decisão  
+- Modelos probabilísticos  
+
+---
+
+## 📐 Teorema de Bayes (intuição)
+O Teorema de Bayes é definido por:
+
+```
+P(A | B) = P(B | A) · P(A)
+           ----------------
+                 P(B)
+```
+
+Onde:
+- **P(A|B)**: probabilidade do evento A ocorrer dado B  
+- **P(A)**: probabilidade inicial de A  
+- **P(B|A)**: probabilidade de B ocorrer dado A  
+- **P(B)**: probabilidade total de B ocorrer  
+
+No contexto do projeto:
+- **A** = cliente ser inadimplente  
+- **B** = cliente ter atraso de pagamento  
 
 ---
 
@@ -45,39 +66,27 @@ aprendizagem_bayesiana/
 
 ---
 
-## 📄 Descrição dos Arquivos
+## 📄 Descrição dos Arquivos (Resumo)
 
-### data/gerar_dados.py
-Responsável por gerar uma base de dados sintética de crédito, contendo informações como Idade, renda, valor do empréstimo, score de Crédito, atraso de pagamento e inadimplência.
+- **data/gerar_dados.py**
 
-O script também insere dados inconsistentes propositalmente, permitindo demonstrar técnicas de tratamento de dados.
+Gera uma base de dados sintética de crédito, incluindo propositalmente inconsistências para demonstrar tratamento de dados.
 
----
+- **data/credito.csv**
 
-### data/credito.csv
-Base de dados utilizada no projeto.
+Base de dados utilizada em todas as etapas do projeto.
 
-Os dados simulam um cenário real de análise de crédito e são usados em todas as etapas de análise e modelagem.
+- **src/carregar_dados.py**
 
----
+Responsável pela leitura do CSV e carregamento dos dados em um DataFrame pandas.
 
-### src/carregar_dados.py
-Arquivo responsável pela leitura do arquivo CSV e carregamento dos dados em um DataFrame pandas.
+- **src/tratamento.py**
 
----
+Realiza limpeza e correções, como valores negativos, idades irreais e scores fora do intervalo válido.
 
-### src/tratamento.py
-Contém as funções de limpeza e tratamento dos dados, como:
-- Correção de valores negativos
-- Ajuste de idades irreais
-- Correção de scores fora do intervalo válido
+- **src/analise_exploratoria.py**
 
----
-
-### src/analise_exploratoria.py
-Responsável pela análise exploratória dos dados (EDA) e geração dos gráficos.
-
-Essa etapa ajuda a entender padrões, distribuições e relações entre as variáveis do conjunto de dados.
+Executa a análise exploratória (EDA) e gera os gráficos do projeto.
 
 ---
 
@@ -98,43 +107,19 @@ Após o tratamento dos dados, foi realizada uma análise estatística descritiva
 | 75%    | 56.25 | 4466.47 | 18788.98 | 707.00 | 0.25 | 0.00 |
 | Max    | 69.00 | 7546.76 | 32774.14 | 846.00 | 1.00 | 1.00 |
 
-### 🔎 Origem das Estatísticas e Probabilidades
+### 📊 Análise Bayesiana
 
-As estatísticas descritivas apresentadas nesta seção (count, mean, std, quartis e valores extremos) são geradas durante a etapa de **análise exploratória**, implementada no arquivo `src/analise_exploratoria.py`.
+A probabilidade condicional foi calculada no arquivo src/bayes.py, utilizando contagens diretas dos eventos observados na base de dados.
 
-Esse módulo é responsável por calcular os resumos estatísticos a partir do DataFrame já tratado e por gerar os gráficos utilizados no projeto.
+Resultado obtido:
 
-A **probabilidade de inadimplência dado atraso de pagamento** é calculada no arquivo `src/bayes.py`, utilizando conceitos de probabilidade condicional.
+**P(Inadimplente | Atraso) = 26,67%**
 
-Todo esse fluxo é coordenado pelo arquivo `main.py`, que executa as etapas na seguinte ordem:
-- carregamento dos dados  
-- tratamento  
-- análise exploratória  
-- cálculo bayesiano
+### 📌 Interpretação
 
-### Análise Bayesiana
+Esse valor significa que, entre os clientes que apresentaram atraso de pagamento, aproximadamente 26,67% tornaram-se inadimplentes.
 
-A partir dos dados, foi calculada a **probabilidade de inadimplência dado que o cliente apresentou atraso de pagamento**:
-
-**P(Inadimplente \| Atraso) = 26,67%**
-
-Esse resultado indica que clientes com histórico de atraso possuem maior risco de inadimplência, reforçando a importância dessa variável no modelo.
-
----
-
-### src/bayes.py
-Implementa o cálculo da probabilidade condicional utilizando o Teorema de Bayes.
-
-O resultado principal é a probabilidade de um cliente ser inadimplente dado que ele já atrasou um pagamento.
-
----
-
-### main.py
-Arquivo principal que orquestra a execução do projeto, realizando:
-- Carregamento dos dados
-- Tratamento
-- Análise exploratória
-- Cálculo Bayesiano
+O resultado mostra que o atraso é um forte indicativo de risco, mas não uma regra absoluta, reforçando a importância de modelos probabilísticos em vez de decisões determinísticas.
 
 ---
 
