@@ -103,8 +103,7 @@ As imagens abaixo devem ser adicionadas na pasta img/ e referenciadas neste READ
 
 ### 📌 Distribuição de Inadimplência
 
-!Distribuição de Inadimplência
-
+![Distribuição de Inadimplência](img/img1.png)
 
 Este gráfico mostra a quantidade de clientes inadimplentes e não inadimplentes.
 
@@ -114,7 +113,7 @@ Este gráfico mostra a quantidade de clientes inadimplentes e não inadimplentes
 
 ### 📌 Score de Crédito vs Inadimplência
 
-!Score vs Inadimplência
+![Score vs Inadimplência](img/img2.png)
 
 
 Este gráfico mostra a relação entre o score de crédito e a inadimplência.
@@ -125,7 +124,7 @@ Clientes inadimplentes tendem a apresentar scores mais baixos, porém há sobrep
 
 ### 📌 Renda Mensal vs Inadimplência
 
-!Renda vs Inadimplência
+![Renda vs Inadimplência](img/img3.png)
 
 
 O gráfico evidencia que clientes inadimplentes tendem a ter renda um pouco menor, mas também existem clientes com renda mais alta que se tornam inadimplentes.
