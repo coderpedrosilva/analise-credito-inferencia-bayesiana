@@ -98,20 +98,19 @@ Após o tratamento dos dados, foi realizada uma análise estatística descritiva
 | 75%    | 56.25 | 4466.47 | 18788.98 | 707.00 | 0.25 | 0.00 |
 | Max    | 69.00 | 7546.76 | 32774.14 | 846.00 | 1.00 | 1.00 |
 
-\### 🔎 Origem das Estatísticas e Probabilidades
-\
-\As estatísticas descritivas apresentadas nesta seção (count, mean, std, quartis e valores extremos) são geradas durante a etapa de **análise exploratória**, implementada no arquivo `src/analise_exploratoria.py`.
-\
-\Esse módulo é responsável por calcular os resumos estatísticos a partir do DataFrame já tratado e por gerar os gráficos utilizados no projeto.
-\
-\A **probabilidade de inadimplência dado atraso de pagamento** é calculada no arquivo `src/bayes.py`, utilizando conceitos de probabilidade condicional.
-\
-\Todo esse fluxo é coordenado pelo arquivo `main.py`, que executa as etapas na seguinte ordem:
-\- carregamento dos dados  
-\- tratamento  
-\- análise exploratória  
-\- cálculo bayesiano
+### 🔎 Origem das Estatísticas e Probabilidades
 
+As estatísticas descritivas apresentadas nesta seção (count, mean, std, quartis e valores extremos) são geradas durante a etapa de **análise exploratória**, implementada no arquivo `src/analise_exploratoria.py`.
+
+Esse módulo é responsável por calcular os resumos estatísticos a partir do DataFrame já tratado e por gerar os gráficos utilizados no projeto.
+
+A **probabilidade de inadimplência dado atraso de pagamento** é calculada no arquivo `src/bayes.py`, utilizando conceitos de probabilidade condicional.
+
+Todo esse fluxo é coordenado pelo arquivo `main.py`, que executa as etapas na seguinte ordem:
+- carregamento dos dados  
+- tratamento  
+- análise exploratória  
+- cálculo bayesiano
 
 ### Análise Bayesiana
 
