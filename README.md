@@ -109,7 +109,7 @@ Após o tratamento dos dados, foi realizada uma análise estatística descritiva
 
 ### 📊 Análise Bayesiana
 
-A probabilidade condicional foi calculada no arquivo src/bayes.py, utilizando contagens diretas dos eventos observados na base de dados.
+A probabilidade condicional foi calculada no arquivo `src/bayes.py`, utilizando contagens diretas dos eventos observados na base de dados.
 
 Resultado obtido:
 
