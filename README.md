@@ -81,6 +81,33 @@ Essa etapa ajuda a entender padrões, distribuições e relações entre as vari
 
 ---
 
+## 📈 Análise Estatística Descritiva
+
+Após o tratamento dos dados, foi realizada uma análise estatística descritiva para compreender o perfil dos clientes e o comportamento das variáveis envolvidas no estudo de inadimplência.
+
+### Estatísticas Resumidas
+
+| Métrica | Idade | Renda Mensal | Valor do Empréstimo | Score de Crédito | Atraso de Pagamento | Inadimplente |
+|--------|------:|-------------:|--------------------:|-----------------:|-------------------:|-------------:|
+| Count  | 60.00 | 60.00 | 60.00 | 60.00 | 60.00 | 60.00 |
+| Mean   | 43.48 | 3641.70 | 15027.51 | 560.14 | 0.25 | 0.22 |
+| Std    | 15.33 | 1195.69 | 6048.52 | 163.00 | 0.44 | 0.42 |
+| Min    | 19.00 | 1600.05 | 843.80 | 308.00 | 0.00 | 0.00 |
+| 25%    | 31.75 | 2857.58 | 11865.30 | 433.00 | 0.00 | 0.00 |
+| 50%    | 42.00 | 3626.68 | 13767.91 | 528.25 | 0.00 | 0.00 |
+| 75%    | 56.25 | 4466.47 | 18788.98 | 707.00 | 0.25 | 0.00 |
+| Max    | 69.00 | 7546.76 | 32774.14 | 846.00 | 1.00 | 1.00 |
+
+### Análise Bayesiana
+
+A partir dos dados, foi calculada a **probabilidade de inadimplência dado que o cliente apresentou atraso de pagamento**:
+
+**P(Inadimplente \| Atraso) = 26,67%**
+
+Esse resultado indica que clientes com histórico de atraso possuem maior risco de inadimplência, reforçando a importância dessa variável no modelo.
+
+---
+
 ### src/bayes.py
 Implementa o cálculo da probabilidade condicional utilizando o Teorema de Bayes.
 
