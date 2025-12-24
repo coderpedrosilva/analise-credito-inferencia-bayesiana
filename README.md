@@ -48,7 +48,7 @@ aprendizagem_bayesiana/
 ## 📄 Descrição dos Arquivos
 
 ### data/gerar_dados.py
-Responsável por gerar uma base de dados sintética de crédito, contendo informações como idade, renda, score de crédito, atraso em pagamento e inadimplência.
+Responsável por gerar uma base de dados sintética de crédito, contendo informações como Idade, renda, valor do empréstimo, score de Crédito, atraso de pagamento e e inadimplência.
 
 O script também insere dados inconsistentes propositalmente, permitindo demonstrar técnicas de tratamento de dados.
 
