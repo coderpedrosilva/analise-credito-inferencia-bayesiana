@@ -10,9 +10,10 @@ Projeto de nível **júnior**, voltado para estudos iniciais em Ciência de Dado
 ---
 
 ## 🧠 Conceito: Aprendizagem Bayesiana
+
 A Aprendizagem Bayesiana é baseada no **Teorema de Bayes**, que permite atualizar uma probabilidade inicial à medida que novas evidências são observadas.
 
-De forma simplificada, o projeto responde à pergunta:
+De forma simples, este projeto responde à seguinte pergunta:
 
 > Qual é a probabilidade de um cliente ser inadimplente dado que ele já atrasou um pagamento?
 
@@ -23,7 +24,8 @@ Essa abordagem é amplamente utilizada em:
 
 ---
 
-## 📐 Teorema de Bayes (intuição)
+## 📐 Teorema de Bayes (intuição e aplicação)
+
 O Teorema de Bayes é definido por:
 
 ```
@@ -31,16 +33,30 @@ P(A | B) = P(B | A) · P(A)
            ----------------
                  P(B)
 ```
+Ou
+
+```
+P(A | B) = (P(B | A) * P(A)) / P(B)
+```
 
 Onde:
-- **P(A|B)**: probabilidade do evento A ocorrer dado B  
+- **P(A | B)**: probabilidade do evento A ocorrer dado B  
 - **P(A)**: probabilidade inicial de A  
-- **P(B|A)**: probabilidade de B ocorrer dado A  
+- **P(B | A)**: probabilidade de B ocorrer dado A  
 - **P(B)**: probabilidade total de B ocorrer  
 
 No contexto do projeto:
 - **A** = cliente ser inadimplente  
 - **B** = cliente ter atraso de pagamento  
+
+A função `probabilidade_bayesiana(df)` implementa diretamente essa fórmula:
+
+- `p_inadimplente` calcula **P(A)**, a taxa geral de inadimplência  
+- `p_atraso` calcula **P(B)**, a taxa geral de atraso  
+- `p_atraso_dado_inadimplente` calcula **P(B | A)**, a proporção de inadimplentes que atrasaram pagamentos  
+- O cálculo final aplica o Teorema de Bayes para obter **P(A | B)**  
+
+O valor retornado representa a **probabilidade de inadimplência dado que houve atraso de pagamento**, conectando a teoria estatística ao comportamento observado nos dados.
 
 ---
 
