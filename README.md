@@ -99,13 +99,16 @@ Arquivo principal que orquestra a execução do projeto, realizando:
 
 ## 📊 Análise Exploratória — Interpretação dos Gráficos
 
-As imagens abaixo devem ser adicionadas na pasta img/ e referenciadas neste README.
-
 ### 📌 Distribuição de Inadimplência
 
 ![Distribuição de Inadimplência](img/img1.png)
 
 Este gráfico mostra a quantidade de clientes inadimplentes e não inadimplentes.
+Na variável inadimplente, os valores representam:
+
+0 → cliente não inadimplente
+
+1 → cliente inadimplente
 
 É possível observar que a maioria dos clientes não é inadimplente, o que representa um cenário realista de dados de crédito e justifica o uso de análise probabilística.
 
@@ -115,8 +118,12 @@ Este gráfico mostra a quantidade de clientes inadimplentes e não inadimplentes
 
 ![Score vs Inadimplência](img/img2.png)
 
-
 Este gráfico mostra a relação entre o score de crédito e a inadimplência.
+No eixo horizontal, a variável inadimplente indica:
+
+0 → cliente não inadimplente
+
+1 → cliente inadimplente
 
 Clientes inadimplentes tendem a apresentar scores mais baixos, porém há sobreposição entre os grupos, indicando que o score sozinho não é suficiente para determinar o risco.
 
@@ -126,8 +133,14 @@ Clientes inadimplentes tendem a apresentar scores mais baixos, porém há sobrep
 
 ![Renda vs Inadimplência](img/img3.png)
 
+O gráfico evidencia a relação entre renda mensal e inadimplência.
+No eixo horizontal, a variável inadimplente representa:
 
-O gráfico evidencia que clientes inadimplentes tendem a ter renda um pouco menor, mas também existem clientes com renda mais alta que se tornam inadimplentes.
+0 → cliente não inadimplente
+
+1 → cliente inadimplente
+
+Clientes inadimplentes tendem a ter renda um pouco menor, mas também existem clientes com renda mais alta que se tornam inadimplentes.
 
 Isso reforça a necessidade de uma análise baseada em probabilidade, e não em regras fixas.
 
