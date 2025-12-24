@@ -142,6 +142,9 @@ No eixo horizontal, a variável inadimplente representa:
 
 Clientes inadimplentes tendem a ter renda um pouco menor, mas também existem clientes com renda mais alta que se tornam inadimplentes.
 
+As bolinhas fora da caixa representam outliers, ou seja, clientes com renda muito acima ou abaixo do padrão do grupo.
+Esses casos indicam comportamentos atípicos e reforçam que a inadimplência não depende apenas da renda, mas da combinação de múltiplos fatores.
+
 Isso reforça a necessidade de uma análise baseada em probabilidade, e não em regras fixas.
 
 ---
