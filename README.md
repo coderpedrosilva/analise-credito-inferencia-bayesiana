@@ -1,21 +1,33 @@
-# 📊 Análise de Crédito com Aprendizagem Bayesiana
+# 📊 Análise de Crédito com Inferência Bayesiana
 
 ## 📌 Visão Geral
-Este projeto tem como objetivo aplicar conceitos de **Aprendizagem Bayesiana** para análise de risco de crédito, utilizando dados sintéticos e estatística probabilística em Python.
+Este projeto tem como objetivo aplicar conceitos de **Inferência Bayesiana** para análise de risco de crédito, utilizando dados sintéticos e estatística probabilística em Python.
 
 O foco é demonstrar, de forma prática e didática, como a **probabilidade condicional** pode auxiliar na tomada de decisão em cenários reais, como a identificação de clientes com maior risco de inadimplência.
 
 Projeto de nível **júnior**, voltado para estudos iniciais em Ciência de Dados, Estatística e Machine Learning.
 
+Este projeto aplica conceitos de Inferência Bayesiana, utilizando o Teorema de Bayes para estimar probabilidades condicionais a partir de dados observados.
+
+
+## ▶️ Como Executar o Projeto
+
+```bash
+python data/gerar_dados.py
+python main.py
+```
+
 ---
 
-## 🧠 Conceito: Aprendizagem Bayesiana
+## 🧠 Conceito: Inferência Bayesiana
 
-A Aprendizagem Bayesiana é baseada no **Teorema de Bayes**, que permite atualizar uma probabilidade inicial à medida que novas evidências são observadas.
+A Inferência Bayesiana é baseada no **Teorema de Bayes**, que permite estimar probabilidades condicionais a partir de evidências observadas.
 
 De forma simples, este projeto responde à seguinte pergunta:
 
 > Qual é a probabilidade de um cliente ser inadimplente dado que ele já atrasou um pagamento?
+
+Embora não haja treino de um modelo de Machine Learning, o projeto demonstra o princípio do aprendizado Bayesiano, no qual probabilidades são atualizadas a partir de evidências observadas.
 
 Essa abordagem é amplamente utilizada em:
 - Análise de risco de crédito  
@@ -33,7 +45,7 @@ P(A | B) = P(B | A) · P(A)
            ----------------
                  P(B)
 ```
-Ou
+A forma abaixo é equivalente e mais próxima da implementação em código, facilitando a transição da teoria para o Python:
 
 ```
 P(A | B) = (P(B | A) * P(A)) / P(B)
@@ -92,6 +104,14 @@ Gera uma base de dados sintética de crédito, incluindo propositalmente inconsi
 
 Base de dados utilizada em todas as etapas do projeto.
 
+- **src/analise_exploratoria.py**
+
+Executa a análise exploratória (EDA) e gera os gráficos do projeto.
+
+- **src/bayes.py**
+
+Implementa o cálculo da probabilidade condicional usando o Teorema de Bayes.
+
 - **src/carregar_dados.py**
 
 Responsável pela leitura do CSV e carregamento dos dados em um DataFrame pandas.
@@ -99,10 +119,6 @@ Responsável pela leitura do CSV e carregamento dos dados em um DataFrame pandas
 - **src/tratamento.py**
 
 Realiza limpeza e correções, como valores negativos, idades irreais e scores fora do intervalo válido.
-
-- **src/analise_exploratoria.py**
-
-Executa a análise exploratória (EDA) e gera os gráficos do projeto.
 
 ---
 
@@ -194,16 +210,7 @@ Isso reforça a necessidade de uma análise baseada em probabilidade, e não em 
 
 ---
 
-## ▶️ Como Executar o Projeto
-
-```bash
-python data/gerar_dados.py
-python main.py
-```
-
----
-
 ## 🎯 Conclusão
-Este projeto demonstra, de forma simples e objetiva, como a Aprendizagem Bayesiana pode ser aplicada em problemas reais de análise de crédito.
+Este projeto demonstra, de forma simples e objetiva, como a Inferência Bayesiana pode ser aplicada em problemas reais de análise de crédito.
 
 Ele serve como uma base sólida para evolução futura, como a implementação de Naive Bayes com scikit-learn ou modelos mais avançados de classificação.
